@@ -35,7 +35,7 @@ const phaserKonfig = {
 
 rendrePersoner();
 
-const phaserGame = new Phaser.Game(phaserKonfig);
+new Phaser.Game(phaserKonfig);
 
 document.onvisibilitychange = () => {
   if (document.visibilityState === 'visible') {

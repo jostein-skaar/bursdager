@@ -86,6 +86,7 @@ export class Bursdagsene extends Phaser.Scene {
 
     this.physics.add.collider(this.ballonggruppe, this.ballonggruppe);
     this.physics.add.collider(this.kanongruppe, this.ballonggruppe);
+    // @ts-ignore
     this.physics.add.collider(this.spikergruppe, this.ballonggruppe, (spiker, ballong: Phaser.Physics.Arcade.Sprite) => {
       ballong.disableBody(true, true);
       const antallBallonger = this.ballonggruppe.countActive(true);
@@ -146,6 +147,7 @@ export class Bursdagsene extends Phaser.Scene {
       .setVelocity(this.innstillinger.spikerfart * 0.48, this.innstillinger.spikerfart);
   }
 
+  // @ts-ignore
   private lagMangeBallonger() {
     for (let teller = 0; teller < this.innstillinger.maksAntallBallonger; teller++) {
       this.lagNyBallong2();
@@ -173,10 +175,11 @@ export class Bursdagsene extends Phaser.Scene {
     this.tekst.setText(this.lagTekst(antallBallonger));
   }
 
+  // @ts-ignore
   private lagNyBallong2() {
     const x = Phaser.Math.Between(0, this.bredde);
     const y = Phaser.Math.Between(0, this.hoyde);
-    const ballong: Phaser.Physics.Arcade.Sprite = this.ballonggruppe
+    this.ballonggruppe
       .create(x, y, 'ballong', Phaser.Math.Between(0, 14))
       .setSize(25, 30)
       .setBounce(1, 1)
