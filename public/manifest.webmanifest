@@ -1,10 +1,11 @@
 {
   "name": "Bursdager",
   "short_name": "Bursdager",
-  "theme_color": "#ff0000",
+  "theme_color": "#ffffff",
   "background_color": "#ffffff",
   "display": "fullscreen",
   "scope": "./",
+  "start_url": "./",
   "icons": [
     {
       "src": "assets/ikoner/bursdager-ikon-32.png",
