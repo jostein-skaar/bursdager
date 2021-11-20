@@ -5,7 +5,7 @@
   "background_color": "#ffffff",
   "display": "fullscreen",
   "scope": "./",
-  "start_url": "./",
+  "start_url": ".",
   "icons": [
     {
       "src": "assets/ikoner/bursdager-ikon-32.png",
