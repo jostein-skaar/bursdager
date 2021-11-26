@@ -1,4 +1,5 @@
 import './style.scss';
+
 import Phaser from 'phaser';
 import { Bursdagsene } from './bursdagsene';
 import moment from 'moment';

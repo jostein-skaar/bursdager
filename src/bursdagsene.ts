@@ -107,7 +107,7 @@ export class Bursdagsene extends Phaser.Scene {
     // this.lagMangeBallonger();
 
     this.tekst = this.add
-      .text(this.bredde / 2, this.hoyde - 60, this.lagTekst(0), { fontFamily: 'arial', fontSize: '20px', fill: '#000' })
+      .text(this.bredde / 2, this.hoyde - 60, this.lagTekst(0), { fontFamily: 'arial', fontSize: '20px', color: '#000' })
       .setOrigin(0.5, 1)
       .setDepth(2);
   }
