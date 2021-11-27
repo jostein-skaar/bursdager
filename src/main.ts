@@ -108,3 +108,14 @@ function dagerTilBursdag(fodselsdato: moment.Moment): number {
 
   return bursdag.diff(moment(), 'days') + 1;
 }
+
+window.onload = () => {
+  const loaderDiv: HTMLElement | null = document.getElementById('loader');
+  if (loaderDiv) {
+    loaderDiv.style.display = 'none';
+  }
+  const contentDiv: HTMLElement | null = document.getElementById('content');
+  if (contentDiv) {
+    contentDiv.removeAttribute('hidden');
+  }
+};
