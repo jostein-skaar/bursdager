@@ -34,19 +34,22 @@ export class Bursdagsene extends Phaser.Scene {
 
     // @ts-ignore
     this.scale.on('resize', (gameSize, baseSize, displaySize, resolution, previousWidth, previousHeight) => {
-      console.log('resizea', { gameSize, baseSize, displaySize, resolution, previousWidth, previousHeight });
-      this.scene.restart();
+      setTimeout(() => {
+        console.log('resizea', { gameSize, baseSize, displaySize, resolution, previousWidth, previousHeight });
+        this.scene.restart();
+      });
     });
   }
 
-  preload() {
-    this.load.spritesheet('ballong', 'assets/ballonger-sprite.png', { frameWidth: 40, frameHeight: 50 });
-    this.load.image('spiker', 'assets/spiker.png');
-    this.load.image('spikerkanon-topp', 'assets/spikerkanon-topp.png');
-    this.load.image('spikerkanon-bunn', 'assets/spikerkanon-bunn.png');
-    this.load.image('ballongkanon-topp', 'assets/ballongkanon-topp.png');
-    this.load.image('ballongkanon-bunn', 'assets/ballongkanon-bunn.png');
-  }
+  // preload() {
+  //   console.log('preload');
+  //   this.load.spritesheet('ballong', 'assets/ballonger-sprite.png', { frameWidth: 40, frameHeight: 50 });
+  //   this.load.image('spiker', 'assets/spiker.png');
+  //   this.load.image('spikerkanon-topp', 'assets/spikerkanon-topp.png');
+  //   this.load.image('spikerkanon-bunn', 'assets/spikerkanon-bunn.png');
+  //   this.load.image('ballongkanon-topp', 'assets/ballongkanon-topp.png');
+  //   this.load.image('ballongkanon-bunn', 'assets/ballongkanon-bunn.png');
+  // }
 
   create() {
     this.ballonggruppe = this.physics.add.group({

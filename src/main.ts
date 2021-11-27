@@ -3,6 +3,7 @@ import './style.scss';
 import Phaser from 'phaser';
 import { Bursdagsene } from './bursdagsene';
 import moment from 'moment';
+import { Preloadsene } from './preloadsene';
 
 let aktivTid: number;
 
@@ -14,7 +15,7 @@ const phaserKonfig = {
   // 768 - 20 (status bar)
   height: 500,
   width: 500,
-  scene: [Bursdagsene],
+  scene: [Preloadsene, Bursdagsene],
   backgroundColor: 0xffffff,
   autoFocus: true,
   physics: {
